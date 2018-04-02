@@ -11,6 +11,7 @@ This application uses Node JS and MySQL to create an Amazon-like storefront.  Th
 - A table of all possible products is shown to the user.
 - The user is asked two promts about product type and quantity.
 - A response is returned notifying the user of the total cost of purchase if the products are in stock.
+- See screenshots for basic example.
 
 # Technology Used
 
