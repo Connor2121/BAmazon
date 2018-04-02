@@ -53,17 +53,21 @@ function userBuy() {
             }
         }])
         .then(function(input) {
-            console.log(input.id);
+            //console.log(input.id);
             var chosenItem = res[input.id - 1];
-            console.log(chosenItem)
+           // console.log(chosenItem)
             var oldInv = chosenItem.stock_quantity;
 
             var updatedInv = oldInv - input.units;
-            console.log(updatedInv);
+            //console.log(updatedInv);
+
+            // tell customer the price of the of there purchase in if 
 
             if (updatedInv > -1) {
                 connection.query('UPDATE products SET ? WHERE ?', 
                 [{stock_quantity: updatedInv}, {item_id: input.id}],);
+                var priceToatal = parseFloat(input.units) * parseFloat(chosenItem.price);
+                console.log('Your cart total comes out to: $' + priceToatal);
                 userBuy();
             }
             else{
