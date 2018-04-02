@@ -7,6 +7,7 @@ This application uses Node JS and MySQL to create an Amazon-like storefront.  Th
 # Getting Started
 
 - Clone repository and navigate to the directory on your machine.
+- Install all necessary NPM packages (run npm i).
 - Run command node bamazonCustomer.js to start app.
 - A table of all possible products is shown to the user.
 - The user is asked two promts about product type and quantity.
